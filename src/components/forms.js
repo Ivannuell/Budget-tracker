@@ -60,6 +60,8 @@ export function expenseForm() {
                 id: 'expense'
             })
         console.log('Expense Form Submitted');
+        const modal = document.querySelector('.modalBG');
+        modal.remove();
     });
 
     return form;
@@ -94,6 +96,8 @@ export function incomeForm() {
                 id: 'income'
             })
         console.log('Income Form Submitted');
+        const modal = document.querySelector('.modalBG');
+        modal.remove();
     });
 
     return form;
