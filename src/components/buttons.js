@@ -1,5 +1,5 @@
 import { createModal, showModal } from "./modal";
-import { expenseForm } from "./forms";
+import { expenseForm, incomeForm } from "./forms";
 
 export function buttonElement() {
     const button = document.createElement('button');
@@ -39,7 +39,8 @@ export function incomeButton() {
     button.addEventListener('click', () => {
         const modalWindow = createModal(
             { title: 'Add Income' }, 
-            { text: 'Enter the Income details below.' });
+            { text: 'Enter the Income details below.',
+             form: incomeForm() });
 
         showModal(modalWindow);
     });

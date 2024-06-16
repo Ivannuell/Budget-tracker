@@ -1,10 +1,19 @@
+export default function addElement(contents) {
+    switch (contents.id) {
+        case 'expense':
+            return expenseElement(contents.info, contents.value);
+        case 'income':
+            return incomeElement(contents.info, contents.value);
+    }
+}
 
-export function element() {
+function element() {
     const element = document.createElement('div')
     element.setAttribute('class', 'element')
 
     return element
 }
+
 
 
 export function expenseElement(info, value) {
@@ -21,4 +30,20 @@ export function expenseElement(info, value) {
     expense.appendChild(expenseValue);
 
     return expense;
+}
+
+export function incomeElement(info, value) {
+    const income = element();
+    const incomeInfo = document.createElement('p');
+    incomeInfo.setAttribute('class', 'incomeInfo')
+    incomeInfo.innerText = info;
+
+    const incomeValue = document.createElement('p');
+    incomeValue.setAttribute('class', 'incomeValue')
+    incomeValue.innerText = value;
+
+    income.appendChild(incomeInfo);
+    income.appendChild(incomeValue);
+
+    return income;
 }
