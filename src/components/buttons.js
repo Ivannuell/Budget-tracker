@@ -1,6 +1,7 @@
 import { createModal, showModal } from "./modal";
 import { expenseForm, incomeForm } from "./forms";
 
+
 export function buttonElement() {
     const button = document.createElement('button');
     button.setAttribute('class', 'button');

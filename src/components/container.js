@@ -1,11 +1,8 @@
-import { expenseElement } from './elements.js';
 import { expenseButton, incomeButton } from "./buttons.js";
-import baseModal, { showModal } from './modal.js';
 
 export function expenseContainer() {
     const container = document.createElement('div');
     container.setAttribute('id', 'expenseContainer')
-
 
     return container;
 }

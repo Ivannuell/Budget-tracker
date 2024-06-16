@@ -1,4 +1,5 @@
 import addElement from './elements.js';
+import { saveExpenses, saveIncome } from './localStorage.js';
 
 function baseForm() {
     const form = document.createElement('form');
@@ -60,6 +61,7 @@ export function expenseForm() {
                 id: 'expense'
             })
         console.log('Expense Form Submitted');
+        saveExpenses();
         const modal = document.querySelector('.modalBG');
         modal.remove();
     });
@@ -96,6 +98,7 @@ export function incomeForm() {
                 id: 'income'
             })
         console.log('Income Form Submitted');
+        saveIncome()
         const modal = document.querySelector('.modalBG');
         modal.remove();
     });
