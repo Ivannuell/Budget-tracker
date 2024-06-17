@@ -19,6 +19,12 @@ export default function baseModal() {
     return modalBG;
 }
 
+/**
+ * This function will create the header of the modal.
+ * 
+ * @param {Object} header the header of the modal.
+ * @returns {HTMLElement} The header of the modal.
+ */
 export function createModalHeader(header) {
     const title = document.createElement('div');
     title.setAttribute('class', 'modalHeader');
@@ -32,6 +38,12 @@ export function createModalHeader(header) {
     return title;
 }
 
+/**
+ * This function will create the body of the modal.
+ * 
+ * @param {object} body The body of the modal.
+ * @returns {HTMLElement} The body of the modal.
+*/
 export function createModalBody(body) {
     const modalBody = document.createElement('div');
     modalBody.setAttribute('class', 'modalBody');
@@ -41,7 +53,6 @@ export function createModalBody(body) {
     bodyText.innerText = body.text;
 
     const form = body.form;
-    console.log(form);
 
     modalBody.appendChild(bodyText);
     modalBody.appendChild(form);
@@ -50,7 +61,6 @@ export function createModalBody(body) {
 }
 
 
-//TODO: Add body properties that creates a form for the user to input data.
 /** 
     * This function will create a modal with the header and body passed as arguments.
     * @param {object} header - The header of the modal.
@@ -58,7 +68,7 @@ export function createModalBody(body) {
     * 
     * @param {object} body - The body of the modal.
     * @property {string} body.text - The text of the modal.
-    * @property {HTMLElement} body.form - The form of the modal.
+    * @property {HTMLFormElement} body.form - The form of the modal.
 */
 export function createModal(header, body){
     const modal = baseModal();
